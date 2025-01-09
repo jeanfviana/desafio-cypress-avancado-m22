@@ -1,0 +1,17 @@
+{
+  "name": "desafio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate-user-data": "node scripts/generateData.js",
+    "test": "npm run generate-user-data && cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^9.3.0",
+    "cypress": "^13.17.0"
+  }
+}
