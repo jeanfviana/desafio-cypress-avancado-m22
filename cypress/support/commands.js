@@ -46,3 +46,20 @@ Cypress.Commands.add('checkout', () => {
     
 
 })
+
+
+Cypress.Commands.add('addItemToCart', () => {
+    const fd = new FormData()
+    fd.append('attribute_size', 'XL')
+    fd.append('attribute_color', 'Red')
+    fd.append('quantity', 2)
+    fd.append('add-to-cart', 3345)
+    fd.append('product_id', 3345)
+    fd.append('variation_id', 3357)
+    cy.request({
+        url: 'product/atomic-endurance-running-tee-crew-neck/',
+        method: 'POST',
+        body: fd
+    })
+    cy.visit('/carrinho')
+});
