@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    
     "generate-user-data": "node scripts/generateData.js",
-    "test": "npm run generate-user-data && cypress open",
-    "cy:run-ci": "start-server-and-test start-server http://localhost:8080 test"
+    "test": "npm run cy:run",
+    "cy:run": "npx cypress run",
+    "cy:run-ci": "start-server-and-test start-server http://localhost:8080 test",
+    "cy:report": "npx mochawesome-merge ./mochawesome-report/mochawesome*.json  > mochawesome-report/report.json && npx marge mochawesome-report/report.json"
+
   },
   "keywords": [],
   "author": "",
@@ -14,6 +18,9 @@
   "devDependencies": {
     "@faker-js/faker": "^9.3.0",
     "cypress": "^13.17.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0",
     "start-server-and-test": "^2.0.10"
   }
 }
