@@ -22,13 +22,15 @@ module.exports = defineConfig({
 
     },
     chromeWebSecurity: false,
-  reporterOptions: {
-    reportDir: "mochawesome-report",
-    overwrite: false,
-    reportFilename: "index.html",
-    html: true,
-    json: false
   },
 
-  },
+  reporter: "mochawesome",
+  reporterOptions: {
+    reportDir: "mochawesome-report",
+    reportFilename: "index.html",
+    overwrite: false,
+    html: true,
+    json: false
+  }
+
 });
