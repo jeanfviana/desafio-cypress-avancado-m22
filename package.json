@@ -6,7 +6,7 @@
   "scripts": {
     
     "generate-user-data": "node scripts/generateData.js",
-    "test": "npm run cy:run",
+    "test": "npm run generate-user-data && npm run cy:run",
     "cy:run": "npx cypress run",
     "cy:run-ci": "start-server-and-test start-server http://localhost:8080 test",
     "cy:report": "npx mochawesome-merge ./mochawesome-report/mochawesome*.json  > mochawesome-report/report.json && npx marge mochawesome-report/report.json"
