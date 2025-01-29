@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "generate-user-data": "node scripts/generateData.js",
-    "test": "npm run generate-user-data && cypress open"
+    "test": "npm run generate-user-data && cypress open",
+    "cy:run-ci": "start-server-and-test start-server http://localhost:8080 test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@faker-js/faker": "^9.3.0",
-    "cypress": "^13.17.0"
+    "cypress": "^13.17.0",
+    "start-server-and-test": "^2.0.10"
   }
 }
