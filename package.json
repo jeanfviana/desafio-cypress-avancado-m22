@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     
-    "generate-user-data": "node scripts/generateData.js",
+    
     "test": "npm run generate-user-data && npm run cy:run",
     "cy:run": "npx cypress run",
+    "generate-user-data": "node scripts/generateData.js",
     "cy:run-ci": "start-server-and-test start-server http://localhost:8080 test",
     "cy:report": "npx mochawesome-merge ./mochawesome-report/mochawesome*.json  > mochawesome-report/report.json && npx marge mochawesome-report/report.json"
 
